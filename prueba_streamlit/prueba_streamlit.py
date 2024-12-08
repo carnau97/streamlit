@@ -27,7 +27,7 @@ with st.sidebar:
     
         
     opciones_num = st.sidebar.number_input('Otra forma de seleccionar un número',min_value=1, 
-                                       max_value=10, value = 5)
+                                        max_value=10, value = 5)
     
     
     
@@ -54,7 +54,7 @@ if cbox: # cbox toma el valor True si se pulsa
 
 
 
-# Creamos un contador: 
+# # Creamos un contador: 
 # contador = 0
 # if st.button("Incrementar"):
 #     contador = contador + 1
@@ -65,10 +65,10 @@ if cbox: # cbox toma el valor True si se pulsa
 # st.write("Valor del contador: " + str(contador))
 
 
-# Si lo hacemos sin session state, no se  guarda el resultado de la interacion previa
+# # Sin session state no se guarda el resultado de la interacion previa porque se vuelve a lanzar contador = 0
 
 
-# Inicializar el estado del contador en session_state
+# # Inicializar el estado del contador en session_state
 # if "contador" not in st.session_state:
 #     st.session_state["contador"] = 0
 
