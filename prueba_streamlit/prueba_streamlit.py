@@ -19,23 +19,23 @@ st.sidebar.markdown("## Menú lateral") # título del menú lateral
 # Para que haga los siguientes menús al lateral:
     
 with st.sidebar:
-    
+
     deslizante = st.slider(
             label="Selecciona un número",
             min_value=1, max_value=10,
             value=5) # valor por defecto
+
     
-        
-    opciones_num = st.sidebar.number_input('Otra forma de seleccionar un número',min_value=1, 
+    opciones_num = st.number_input('Otra forma de seleccionar un número',min_value=1, 
                                         max_value=10, value = 5)
-    
-    
-    
+
+
+
     st.write("Número seleccionado: ", str(opciones_num))
-    
+
     
 
-# Lo que está fuera del st.sidebar, estará en el menú principal
+# # Lo que está fuera del st.sidebar, estará en el menú principal
 
 cbox = st.checkbox('Selecciona para mostrar más información')
 
@@ -52,8 +52,6 @@ if cbox: # cbox toma el valor True si se pulsa
     st.write(seleccion_cat + " seleccionada ✅")
     
 
-
-
 # # Creamos un contador: 
 # contador = 0
 # if st.button("Incrementar"):
@@ -65,22 +63,22 @@ if cbox: # cbox toma el valor True si se pulsa
 # st.write("Valor del contador: " + str(contador))
 
 
-# # Sin session state no se guarda el resultado de la interacion previa porque se vuelve a lanzar contador = 0
+# Sin session state no se guarda el resultado de la interacion previa porque se vuelve a lanzar contador = 0
 
 
-# # Inicializar el estado del contador en session_state
-# if "contador" not in st.session_state:
-#     st.session_state["contador"] = 0
+# Inicializar el estado del contador en session_state
+if "contador" not in st.session_state:
+    st.session_state["contador"] = 0
 
-# # Botón para incrementar el contador
-# if st.button("Incrementar"):
-#     st.session_state["contador"]+= 1
+# Botón para incrementar el contador
+if st.button("Incrementar"):
+    st.session_state["contador"]+= 1
 
-# # Botón para reiniciar el contador
-# if st.button("Reiniciar"):
-#     st.session_state["contador"] = 0
+# Botón para reiniciar el contador
+if st.button("Reiniciar"):
+    st.session_state["contador"] = 0
 
-# st.write("Valor del contador: " + str(st.session_state["contador"]))
+st.write("Valor del contador: " + str(st.session_state["contador"]))
 
 
 

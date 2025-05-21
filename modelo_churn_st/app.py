@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from functions import  procesar_obtener_predicciones, carga_artefactos
+from functions import procesar_obtener_predicciones, carga_artefactos
 
 st.set_page_config('Modelo churn')
 st.header("Predicciones modelo de churn") # título

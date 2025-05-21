@@ -15,7 +15,6 @@ def carga_artefactos():
     return pipeline, modelo
 
 
-
 def procesar_obtener_predicciones(df, pipeline, modelo):
     
     df['financiacion'] = np.where(df['financiacion']=="SI", 1, 0)

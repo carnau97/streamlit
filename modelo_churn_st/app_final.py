@@ -9,8 +9,6 @@ pipeline, modelo = carga_artefactos() # se necesitan para ambas pestañas
 
 tab1, tab2 = st.tabs(["Predicciones", "Métricas"])
 
-
-
 with tab1:
 
     st.header("Predicciones modelo de churn") # título
